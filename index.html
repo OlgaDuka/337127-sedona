@@ -38,7 +38,7 @@
           <h2>Настоящий городок</h2>
           <p>- №1 -</p>
           <p>Седона - не аттракцион для туристов,<br> там течет своя жизнь</p>
-          <img src="img/photo1.jpg" width="66%" height="256" alt="Фото городка">
+          <img src="img/photo1.jpg" width="800" height="256" alt="Фото городка">
         </div>
         <div class="reasons-item group-first">
           <div class="group-first-item">
@@ -58,7 +58,7 @@
           <h2>Там есть<br> мост дьявола</h2>
           <p>- №2 -</p>
           <p>Да, по нему можно пройти! Если конечно<br> вы осмелитесь</p>
-          <img src="img/photo2.jpg" width="66%" height="256" alt="Фото моста дьявола">
+          <img src="img/photo2.jpg" width="800" height="256" alt="Фото моста дьявола">
         </div>
         <div class="reasons-item group-last">
           <div class="group-last-item">
@@ -82,38 +82,38 @@
         <h1>Заинтересовались?</h1>
         <p>Укажите предполагаемые даты поездки,<br> и мы покажем вам лучшие предложения гостиниц в Седоне</p>
         <div class="seach-form">
-          <h2>Поиск гостиницы в Седоне</h2>
+          <h2 class="title-form">Поиск гостиницы в Седоне</h2>
           <form class="search" action="https://echo.htmlacademy.ru" method="get">
-            <label for="date-in">Дата заезда
-              <input id="date-in" type="text" name="date-in" value="24 апреля 2017" placeholder="Дата заезда">
-            </label>
-            <label for="date-out">Дата выезда
-              <input id="date-out" type="text" name="date-out" value="4 июля 2017" placeholder="Дата выезда">
-            </label>
-            <label for="amount-people">Дата заезда
-              <input id="amount-people" type="text" name="amount-people" value="2" placeholder="Сколько взрослых">
-            </label>
-            <label for="amount-child">Дата заезда
-              <input id="amount-child" type="text" name="amount-child" value="2" placeholder="Сколько детей">
-            </label>
-            <button class="btn" type="submit">Найти</button>
+            <label for="arrival">Дата заезда:</label>
+            <input id="arrival" type="text" name="arrival" value="24 апреля 2017" placeholder="Дата заезда">
+            <label for="departure">Дата выезда:</label>
+            <input id="departure" type="text" name="departure" value="4 июля 2017" placeholder="Дата выезда">
+            <label for="amount-people">Взрослые:</label>
+            <button class="btn decrement" type="button">-</button>
+            <input id="amount-people" type="text" name="amount-people" value="2" placeholder="Сколько взрослых">
+            <button class="btn increment" type="button">+</button>
+            <label for="amount-child">Дети:</label>
+            <button class="btn decrement" type="button">-</button>
+            <input id="amount-child" type="text" name="amount-child" value="2" placeholder="Сколько детей">
+            <button class="btn increment" type="button">+</button>
+            <button class="search-btn" type="submit">Найти</button>
           </form>
         </div>
       </section>
     </main>
     <footer class="main-footer">
       <div class="container">
-        <section class="footer-hashtag">
+        <div class="footer-hashtag">
           <h2>#visitsedona</h2>
-        </section>
-        <section class="footer-social">
+        </div>
+        <div class="footer-social">
           <a class="social-btn social-btn-tw" href="#">Твиттер</a>
           <a class="social-btn social-btn-fb" href="#">Фейсбук</a>
           <a class="social-btn social-btn-yt" href="#">YouTube</a>
-        </section>
-        <section class="footer-copyright">
+        </div>
+        <div class="footer-copyright">
           <a class="btn" href="https://htmlacademy.ru">HTML Academy</a>
-        </section>
+        </div>
       </div>
     </footer>
   </body>
