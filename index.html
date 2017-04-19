@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>Седона</title>
+    <link href="css/style.css" rel="stylesheet">
   </head>
   <body>
     <div class="container">
@@ -24,65 +25,65 @@
           </ul>
         </nav>
         <div class="logo">
-          <img src="img/logo.png" width="140" height="70" alt="Городок Седона">
+          <img src="img/logo.png" width="138" height="70" alt="Городок Седона">
         </div>
       </header>
       <main>
         <div class="intro"> <!-- К этому классу привязать фоновую картинку вместе с надписями на ней -->
-          <h2>Седона - небольшой городок в Аризоне,<br> заслуживающий большего!</h2>
+          <h2 class="intro-title">Седона - небольшой городок в Аризоне,<br> заслуживающий большего!</h2>
           <p>Рассмотрим 5 причин, по которым Седона круче, чем Гранд Каньон!</p>
         </div>
         <section class="reasons">
           <div class="reason-item">
-            <h2>Настоящий городок</h2>
+            <h2 class="reason-title">Настоящий городок</h2>
             <span class="number">- №1 -</span>
             <p>Седона - не аттракцион для туристов,<br> там течет своя жизнь</p>
             <img src="img/photo1.jpg" width="800" height="256" alt="Фото городка">
           </div>
           <div class="reasons-item group-first">
             <div class="group-first-item">
-              <h2>Жилье</h2>
+              <h2 class="group-title">Жилье</h2>
               <p>Рекомендуем пожить в настоящем<br> мотеле, все как в кино!</p>
             </div>
             <div class="group-first-item">
-              <h2>Еда</h2>
+              <h2 class="group-title">Еда</h2>
               <p>Всегда заказывайте фирменный бургер,<br> вы не разочаруетесь!</p>
             </div>
             <div class="group-first-item">
-              <h2>Сувениры</h2>
+              <h2 class="group-title">Сувениры</h2>
               <p>Не только китайского, но и местного<br> производства!</p>
             </div>
           </div>
           <div class="reason-item">
-            <h2>Там есть<br> мост дьявола</h2>
+            <h2 class="reason-title">Там есть<br> мост дьявола</h2>
             <span class="number">- №2 -</span>
             <p>Да, по нему можно пройти! Если конечно<br> вы осмелитесь</p>
             <img src="img/photo2.jpg" width="800" height="256" alt="Фото моста дьявола">
           </div>
           <div class="reasons-item group-last">
             <div class="group-last-item">
-              <h2>Небольшая площадь</h2>
+              <h2 class="group-title">Небольшая площадь</h2>
               <span class="number">- №3 -</span>
               <p>Все достопримечательности<br> находятся очень близко</p>
             </div>
             <div class="group-last-item">
-              <h2>Красивая дорога</h2>
+              <h2 class="group-title">Красивая дорога</h2>
               <span class="number">- №4 -</span>
               <p>Ехать в Седону из Лас-Вегаса<br> совсем не скучно!</p>
             </div>
             <div class="group-last-item">
-              <h2>Мало туристов</h2>
+              <h2 class="group-title">Мало туристов</h2>
               <span class="number">- №5 -</span>
               <p>Большинство едет в Гранд Каньон и<br> толпится там</p>
             </div>
           </div>
         </section>
         <section class="decision">
-          <h2 class="title-decision">Заинтересовались?</h2>
+          <h2 class="decision-title">Заинтересовались?</h2>
           <p>Укажите предполагаемые даты поездки,<br> и мы покажем вам лучшие предложения гостиниц в Седоне</p>
-          <div class="seach-form">
-            <h2 class="title-form">Поиск гостиницы в Седоне</h2>
-            <form class="search" action="https://echo.htmlacademy.ru" method="get">
+          <button class="search-hotel">Поиск гостиницы в Седоне</button>
+          <div class="map"> <!-- у этого блока фоновое изображение - карта -->
+            <form class="search-form" action="https://echo.htmlacademy.ru" method="post">
               <label for="arrival">Дата заезда:</label>
               <input id="arrival" type="text" name="arrival" value="24 апреля 2017" placeholder="Дата заезда">
               <label for="departure">Дата выезда:</label>
