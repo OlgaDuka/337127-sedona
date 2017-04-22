@@ -1,3 +1,10 @@
+html,
+body {
+  min-width: 1120px;
+  margin: 0;
+  padding: 0;
+}
+
 body {
   font-family: "PT Sans", "Arial", sans-serif;
 }
@@ -7,13 +14,21 @@ body {
   font-size: 21px;
   font-weight: bold;
   line-height: 26px;
+  text-transform: uppercase;
+}
+
+.intro-reason p {
+  color: #000000;
+  font-size: 14px;
+  line-height: 42px;
+  text-transform: uppercase;
 }
 
 .decision-title {
   color: #000000;
   font-size: 30px;
   font-weight: bold;
-  line-height: 24px;
+  line-height: 26px;
 }
 
 .reason-title, .group-title {
@@ -23,7 +38,146 @@ body {
   line-height: 21px;
 }
 
-/* Заголовок белый, пока нет фона, его не видно
 .reason-title {
   color: #ffffff;
-} */
+}
+
+
+.clearfix::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.container {
+  width: 1200px;
+  margin: 0 auto;
+  padding-left: 40px;
+  padding-right: 40px;
+  background-color: #F2F2F2;
+}
+
+.main-header {
+  min-height: 58px;
+  padding-left: 73px;
+  padding-right: 73px;
+}
+
+.main-menu {
+  min-height: 56px;
+}
+
+.nav-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.main-menu li {
+  display: inline-block;
+  padding-top: 17px;
+  width: 239px;
+}
+
+.main-menu li:nth-child(n+2) {
+  float: right;
+  text-align: right;
+}
+
+.main-menu li:nth-child(-n+2) {
+  float: left;
+  text-align: left;
+}
+
+.main-menu a {
+  color: #000000;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.logo {
+  display: none;
+}
+
+.intro {
+  padding-top: 74px;
+  text-align: center;
+  background-color: #F2F2F2;
+  background-image: url("../img/intro-bottom.png"), url("../img/intro.jpg");
+  background-size: 1200px 57px, 1200px 773px;
+  background-repeat: no-repeat, no-repeat;
+  background-position: center 450px, center -56px;
+}
+
+.intro-reason {
+  margin-top: 78px;
+  padding-top: 42px;
+  padding-bottom: 57px;
+  background-color: #ffffff;
+}
+
+.reason-item {
+  min-height: 256px;
+  margin: 0;
+}
+
+.reason-img-right {
+  float: right;
+}
+
+.reason-img-left {
+  float: left;
+}
+
+.group-first-item, .group-last-item {
+  width: 33%;
+  float: left;
+  margin: 0;
+}
+
+.decision {
+  margin: 0 auto;
+  text-align: center;
+}
+
+
+.modal-win {
+  width: 567px;
+  height: 395px;
+  margin: 0 auto;
+}
+
+.main-footer {
+  width: 100%;
+  margin: 0 auto;
+  background: #F2F2F2 url("../img/map.jpg") no-repeat 100% 3px;
+}
+
+.footer-bottom {
+  width: 1200px;
+  height: 120px;
+  margin: 0 auto;
+  background-color: rgba(249,251,246, 0.9);
+}
+
+.footer-hashtag {
+  float: left;
+  width: 400px;
+  padding-left: 132px;
+  min-height: 120px;
+}
+
+.footer-social {
+  float: left;
+  width: 200px;
+  margin: 0 auto;
+  min-height: 120px;
+}
+
+.footer-copyright {
+  float: right;
+  width: 400px;
+  min-height: 120px;
+}
