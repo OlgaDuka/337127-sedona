@@ -3,14 +3,18 @@
   <head>
     <meta charset="utf-8">
     <title>Гостиницы Седоны</title>
+    <link href="css/normalize.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
   </head>
   <body>
-    <div class="container">
+    <div class="container clearfix">
+      <div class="logo">
+        <a href="index.html"><img src="img/logo.png" width="140" height="70" alt="Городок Седона"></a>
+      </div>
 
-      <header class="main-header">
+      <header class="main-header clearfix">
         <nav class="main-menu">
-          <ul>
+          <ul class="nav-list">
             <li>
               <a href="#">Информация</a>
             </li>
@@ -18,18 +22,17 @@
               <a href="#">Фото и видео</a>
             </li>
             <li>
-              <a href="#">Карта штата</a>
+              <a href="#">Гостиницы</a>
             </li>
             <li>
-              <a href="#">Гостиницы</a>
+              <a href="#">Карта штата</a>
             </li>
           </ul>
         </nav>
-        <a class="logo" href="index.html"><img src="img/logo.png" width="140" height="70" alt="Городок Седона"></a>
       </header>
 
       <main>
-        <form class="search-hotel" action="https://echo.htmlacademy.ru" method="post">
+        <form class="form-search-hotel clearfix" action="https://echo.htmlacademy.ru" method="post">
           <fieldset class="form-group1">
             <legend>Инфраструктура:</legend>
             <input id="pool" type="checkbox" name="pool" checked>
@@ -72,48 +75,56 @@
           <a class="sort-down" href="#"></a>
         </section>
 
-        <article class="home">
+        <article class="home clearfix">
           <img src="img/amara.jpg" alt="Фото курорта" width="135" height="90">
-          <h2 class="home-title">Amara Resort & SPA</h2>
-          <div class="decription">
-            <span class="type-home">Гостиница</span>
-            <a href="#">Подробнее</a>
-          </div>
-          <div class="order">
-            <span class="order-price">от 4000 р.</span>
-            <button class="btn order">Забронировать</button>
+          <div class="home-container clearfix">
+            <h2 class="home-title">Amara Resort & SPA</h2>
+            <div class="decription">
+              <span class="type-home">Гостиница</span>
+              <a href="#">Подробнее</a>
+            </div>
+            <div class="order">
+              <span class="order-price">от 4000 р.</span>
+              <button class="btn order">Забронировать</button>
+            </div>
           </div>
           <div class="rating">
             <span class="stars">* * * *</span>
             <span class="rating-value">Рейтинг:8,5</span>
           </div>
         </article>
+
         <article class="home">
           <img src="img/desert.jpg" alt="Фото мотеля" width="135" height="90">
-          <h2 class="home-title">Desert Quail Inn</h2>
-          <div class="decription">
-            <span class="type-home">Мотель</span>
-            <a href="#">Подробнее</a>
-          </div>
-          <div class="order">
-            <span class="order-price">от 3000 р.</span>
-            <button class="btn order">Забронировать</button>
+          <div class="home-container clearfix">
+            <h2 class="home-title">Desert Quail Inn</h2>
+            <div class="decription">
+              <span class="type-home">Мотель</span>
+              <a href="#">Подробнее</a>
+            </div>
+            <div class="order">
+              <span class="order-price">от 3000 р.</span>
+              <button class="btn order">Забронировать</button>
+            </div>
           </div>
           <div class="rating">
             <span class="stars">* * *</span>
             <span class="rating-value">Рейтинг:8,9</span>
           </div>
         </article>
+
         <article class="home">
           <img src="img/villas.jpg" alt="Фото деревни" width="135" height="90">
-          <h2 class="home-title">Villas at Poco Diablo</h2>
-          <div class="decription">
-            <span class="type-home">Апартаменты</span>
-            <a href="#">Подробнее</a>
-          </div>
-          <div class="order">
-            <span class="order-price">от 2000 р.</span>
-            <button class="btn order">Забронировать</button>
+          <div class="home-container clearfix">
+            <h2 class="home-title">Villas at Poco Diablo</h2>
+            <div class="decription">
+              <span class="type-home">Апартаменты</span>
+              <a href="#">Подробнее</a>
+            </div>
+            <div class="order">
+              <span class="order-price">от 2000 р.</span>
+              <button class="btn order">Забронировать</button>
+            </div>
           </div>
           <div class="rating">
             <span class="stars">* *</span>

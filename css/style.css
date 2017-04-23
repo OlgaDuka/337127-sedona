@@ -58,7 +58,7 @@ body {
 }
 
 .main-header {
-  min-height: 58px;
+  min-height: 57px;
   padding-left: 73px;
   padding-right: 73px;
 }
@@ -98,7 +98,10 @@ body {
 }
 
 .logo {
-  display: none;
+  position: absolute;
+  margin-left: -69px;
+  top: 0;
+  left: 50%;
 }
 
 .intro {
@@ -180,4 +183,80 @@ body {
   float: right;
   width: 400px;
   min-height: 120px;
+}
+
+/* внутренняя страница Гостиницы Седоны */
+
+.form-search-hotel {
+  height: 215px;
+  background-color: #F2F2F2;
+  background-image: url(../img/intro2.jpg);
+  background-position: center;
+}
+
+.form-group1 {
+  float: left;
+  margin-left: 72px;
+  width: 180px;
+}
+
+.form-group2 {
+  float: left;
+  margin-left: 67px;
+  width: 180px;
+}
+
+.form-group3 {
+  float: right;
+  margin-right: 72px;
+  width: 327px;
+}
+
+.sort {
+  height: 75px;
+  padding-top: 13px;
+  padding-left: 71px;
+  background-color: #FEFEFE;
+  border-bottom: 1px solid #E5E5E5;
+}
+
+.sort > * {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.home {
+  height: 150px;
+  padding-left: 72px;
+  background-color: #FEFEFE;
+  border-bottom: 1px solid #E5E5E5;
+}
+
+.home img {
+  float: left;
+  padding-top: 30px;
+}
+
+.home-container {
+  float: left;
+  width: 544px;
+  padding-left: 30px;
+  padding-top: 6px;
+}
+
+.decription {
+  float: left;
+  width: 110px;
+}
+
+.order {
+  width: 142px;
+  float: left;
+  margin-left: 6px;
+}
+
+.rating {
+  float: right;
+  margin-right: 73px;
+  width: 110px;
 }
