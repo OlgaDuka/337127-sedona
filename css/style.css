@@ -9,7 +9,12 @@ body {
   font-family: "PT Sans", "Arial", sans-serif;
 }
 
-.home-title, .sort-title, .intro-title {
+.home-title,
+.sort-title,
+.intro-title,
+.decision-title,
+.btn-search-hotel,
+.search-btn {
   color: #000000;
   font-size: 21px;
   font-weight: bold;
@@ -17,29 +22,38 @@ body {
   text-transform: uppercase;
 }
 
-.intro-reason p {
+.decision-title {
+  font-size: 30px;
+}
+
+.reason-title, .group-title {
+  line-height: 21px;
+}
+
+.reason-title {
+  color: #ffffff;
+}
+
+.intro-reason p,
+.decision p {
   color: #000000;
   font-size: 14px;
   line-height: 42px;
   text-transform: uppercase;
 }
 
-.decision-title {
+.decision p {
+  line-height: 24px;
+}
+
+.search-form label,
+.search-form input[value] {
+  font-family: "PT Sans", "Arial", sans-serif;
   color: #000000;
-  font-size: 30px;
+  font-size: 14px;
   font-weight: bold;
   line-height: 26px;
-}
-
-.reason-title, .group-title {
-  color: #000000;
-  font-size: 21px;
-  font-weight: bold;
-  line-height: 21px;
-}
-
-.reason-title {
-  color: #ffffff;
+  text-transform: uppercase;
 }
 
 
@@ -99,7 +113,7 @@ body {
 
 .logo {
   position: absolute;
-  margin-left: -69px;
+  margin-left: 0;
   top: 0;
   left: 50%;
 }
@@ -142,14 +156,98 @@ body {
 
 .decision {
   margin: 0 auto;
+  padding-top: 30px;
+  text-align: center;
+  background-color: #ffffff;
+}
+
+.btn-search-hotel {
+  width: 568px;
+  height: 86px;
+  margin-top: 30px;
+  color: #ffffff;
+  background-color: #766357;
+}
+
+.search-form {
+  width: 456px;
+  height: 285px;
+  margin: 0 auto;
+  margin-bottom: 78px;
+  padding: 55px;
+  background-color: #ffffff;
+}
+
+.conteiner-field {
+  margin-bottom: 29px;
+}
+
+.conteiner-field label {
+  width: 100px;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.calendar {
+  display: inline-block;
+  width: 346px;
+  height: 38px;
+  background-color: #f2f2f2;
+  border: none;
+}
+
+.calendar input {
+  background-color: #f2f2f2;
+  border: none;
+  padding-left: 12px;
+  padding-top: 8px;
+}
+
+.calendar-btn {
+  float: right;
+  width: 38px;
+  height: 38px;
+  margin-right: 8px;
+  border: none;
+  background-image: url("../img/calendar.png");
+  background-repeat: no-repeat;
+  background-position: right;
+}
+
+.amount {
+  width: 116px;
+  height: 38px;
+  display: inline-block;
+  background-color: #f2f2f2;
+  border: none;
+  font-size: 0;
+}
+
+.plus-minus-btn {
+  width: 38px;
+  height: 38px;
+  display: inline-block;
+  background-color: #f2f2f2;
+  border: none;
+}
+
+.amount input {
+  width: 38px;
+  height: 36px;
+  display: inline-block;
+  background-color: #f2f2f2;
+  border: none;
   text-align: center;
 }
 
-
-.modal-win {
-  width: 567px;
-  height: 395px;
-  margin: 0 auto;
+.search-btn {
+  width: 458px;
+  height: 58px;
+  margin-top: 24px;
+  color: #ffffff;
+  text-align: center;
+  background-color: #81B3D2;
+  border: none;
 }
 
 .main-footer {
@@ -161,29 +259,71 @@ body {
 .footer-bottom {
   width: 1200px;
   height: 120px;
-  margin: 0 auto;
+  font-size: 0;
   background-color: rgba(249,251,246, 0.9);
 }
 
 .footer-hashtag {
-  float: left;
+  display: inline-block;
   width: 400px;
-  padding-left: 132px;
-  min-height: 120px;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.footer-hashtag a {
+  color: #000000;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 14px;
+  line-height: 26px;
+  font-weight: bold;
 }
 
 .footer-social {
-  float: left;
-  width: 200px;
-  margin: 0 auto;
-  min-height: 120px;
+  display: inline-block;
+  width: 400px;
+  text-align: center;
+  vertical-align: middle;
 }
 
-.footer-copyright {
-  float: right;
-  width: 400px;
-  min-height: 120px;
+.social-btn {
+  display: inline-block;
+  width: 46px;
+  height: 48px;
+  margin-left: 6px;
+  margin-top: 36px;
+  margin-bottom: 36px;
+  background-color: #81B3D2;
 }
+
+.social-btn-tw {
+  background-image: url("../img/tw.png");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.social-btn-fb {
+  background-image: url("../img/fb.png");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.social-btn-yt {
+  background-image: url("../img/yt.png");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+
+.footer-copyright {
+  display: inline-block;
+  width: 400px;
+  text-align: center;
+  vertical-align: middle;
+  font-size: 21px;
+}
+
+
 
 /* внутренняя страница Гостиницы Седоны */
 
