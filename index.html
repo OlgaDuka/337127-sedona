@@ -105,37 +105,52 @@
 
       <footer class="main-footer">
 
-          <div class="modal-win">
-            <form class="search-form" action="https://echo.htmlacademy.ru" method="post">
-              <label for="arrival">Дата заезда:</label>
+        <form class="search-form" action="https://echo.htmlacademy.ru" method="post">
+          <div class="conteiner-field">
+            <label for="arrival">Дата заезда:</label>
+            <div class="calendar">
               <input id="arrival" type="text" name="arrival" value="24 апреля 2017" placeholder="Дата заезда">
-              <label for="departure">Дата выезда:</label>
+              <button class="calendar-btn" type="button"></button>
+            </div>
+          </div>
+          <div class="conteiner-field">
+            <label for="departure">Дата выезда:</label>
+            <div class="calendar">
               <input id="departure" type="text" name="departure" value="4 июля 2017" placeholder="Дата выезда">
-              <label for="amount-people">Взрослые:</label>
-              <button class="btn decrement" type="button">-</button>
-              <input id="amount-people" type="text" name="amount-people" value="2" placeholder="Сколько взрослых">
-              <button class="btn increment" type="button">+</button>
-              <label for="amount-child">Дети:</label>
-              <button class="btn decrement" type="button">-</button>
-              <input id="amount-child" type="text" name="amount-child" value="2" placeholder="Сколько детей">
-              <button class="btn increment" type="button">+</button>
-              <button class="search-btn" type="submit">Найти</button>
-            </form>
+              <button class="calendar-btn" type="button"></button>
+            </div>
           </div>
 
-          <div class="footer-bottom clearfix">
-            <div class="footer-hashtag">
-              <a href=""><span class="hashtag">#visitsedona</span></a>
+          <div class="conteiner-field">
+            <label for="amount-people">Взрослые:</label>
+            <div class="amount">
+              <button class="plus-minus-btn" type="button">-</button>
+              <input id="amount-people" type="text" name="amount-people" value="2" placeholder="Сколько взрослых">
+              <button class="plus-minus-btn" type="button">+</button>
             </div>
-            <div class="footer-social">
-              <a class="social-btn social-btn-tw" href="#">Твиттер</a>
-              <a class="social-btn social-btn-fb" href="#">Фейсбук</a>
-              <a class="social-btn social-btn-yt" href="#">YouTube</a>
-            </div>
-            <div class="footer-copyright">
-              <a class="btn" href="https://htmlacademy.ru">HTML Academy</a>
+            <label for="amount-child">Дети:</label>
+            <div class="amount">
+              <button class="plus-minus-btn" type="button">-</button>
+              <input id="amount-child" type="text" name="amount-child" value="2" placeholder="Сколько детей">
+              <button class="plus-minus-btn" type="button">+</button>
             </div>
           </div>
+          <button class="search-btn" type="submit">Найти</button>
+        </form>
+
+        <div class="footer-bottom">
+          <div class="footer-hashtag">
+            <a href=""><span class="hashtag">#visitsedona</span></a>
+          </div>
+          <div class="footer-social">
+            <a class="social-btn social-btn-tw" href="#">Твиттер</a>
+            <a class="social-btn social-btn-fb" href="#">Фейсбук</a>
+            <a class="social-btn social-btn-yt" href="#">YouTube</a>
+          </div>
+          <div class="footer-copyright">
+            <a class="btn" href="https://htmlacademy.ru">HTML Academy</a>
+          </div>
+        </div>
 
       </footer>
 
