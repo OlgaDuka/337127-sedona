@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>Гостиницы Седоны</title>
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700" rel="stylesheet">
     <link href="css/normalize.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
   </head>
@@ -35,15 +36,21 @@
         <form class="form-search-hotel clearfix" action="https://echo.htmlacademy.ru" method="post">
           <fieldset class="form-group1">
             <legend>Инфраструктура:</legend>
-            <label><input type="checkbox" name="pool" checked><span></span>Бассейн</label>
-            <label><input type="checkbox" name="parking"><span></span>Парковка</label>
-            <label><input type="checkbox" name="wi-fi"><span></span>WI-FI</label>
+             <input id="pool" type="checkbox" name="pool" checked>
+-            <label for="pool">Бассейн</label>
+-            <input id="parking" type="checkbox" name="parking">
+-            <label for="parking">Парковка</label>
+-            <input id="wi-fi" type="checkbox" name="wi-fi">
+-            <label for="wi-fi">WI-FI</label>
           </fieldset>
           <fieldset class="form-group2">
             <legend>Тип жилья:</legend>
-            <label><input type="checkbox" name="hotel" checked><span></span>Гостиница</label>
-            <label><input type="checkbox" name="motel"><span></span>Мотель</label>
-            <label><input type="checkbox" name="apatments" checked><span></span>Апартаменты</label>
+            <input id="hotel" type="checkbox" name="hotel" checked>
+-            <label for="hotel">Гостиница</label>
+-            <input id="motel" type="checkbox" name="motel" checked="">
+-            <label for="motel">Мотель</label>
+-            <input id="apatments" type="checkbox" name="apatments" checked>
+-            <label for="apatments">Апартаменты</label>
           </fieldset>
           <fieldset class="form-group3">
             <legend>Стоимость в сутки (р):</legend>
@@ -68,7 +75,7 @@
             <a href="#">По рейтингу</a>
           </div>
           <a class="sort-up" href="#"></a>
-          <a class="sort-down" href="#"></a>
+          <a class="sort-down sort-down-active" href="#"></a>
         </section>
 
         <article class="home clearfix">

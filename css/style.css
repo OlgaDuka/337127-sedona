@@ -85,6 +85,7 @@ body {
 .intro {
   padding-top: 74px;
   text-align: center;
+  color: #000000;
   background-color: #F2F2F2;
   background-image: url("../img/intro-bottom.png"), url("../img/intro.jpg");
   background-size: 1200px 57px, 1200px 773px;
@@ -101,7 +102,7 @@ body {
 .intro-reason {
   margin-top: 78px;
   padding-top: 42px;
-  padding-bottom: 57px;
+  padding-bottom: 30px;
   background-color: #ffffff;
 }
 
@@ -118,24 +119,27 @@ body {
 
 .reason-img-right {
   float: right;
+  color: #000000;
+  background-color: #ffffff;
 }
 
 .reason-img-left {
   float: left;
+  color: #000000;
+  background-color: #eeeeee;
 }
 
 .reason-disc {
   display: block;
   float: left;
   width: 400px;
-  height: 100%;
+  color: #ffffff;
   text-align: center;
 }
 
 .reason-title {
   margin-top: 50px;
   margin-bottom: 30px;
-  color: #ffffff;
   font-size: 21px;
   font-weight: bold;
   line-height: 21px;
@@ -143,16 +147,23 @@ body {
 
 .reason-disc p {
   margin-top: 30px;
-  color: #ffffff;
 }
 
-.reason-disc span {
-  color: #ffffff;
+.group1 .reason-title {
+  color: #000000;
+  margin-top: 162px;
 }
 
-.group1 .reason-title,
 .group2 .reason-title {
   color: #000000;
+}
+
+.group1 p {
+  margin-bottom: 78px;
+}
+
+.group2 p {
+  margin-bottom: 53px;
 }
 
 .group1 p,
@@ -170,6 +181,23 @@ body {
   background-color: #eeeeee;
 }
 
+.group1:nth-child(1) {
+  background-image: url("../img/home.png");
+  background-repeat: no-repeat;
+  background-position: 162px 62px;
+}
+
+.group1:nth-child(2) {
+  background-image: url("../img/meal.png");
+  background-repeat: no-repeat;
+  background-position: 162px 60px;
+}
+
+.group1:nth-child(3) {
+  background-image: url("../img/souvenir.png");
+  background-repeat: no-repeat;
+  background-position: 167px 54px;
+}
 
 
 .decision {
@@ -235,8 +263,8 @@ body {
 }
 
 .search-form input[value] {
-  font-family: "PT Sans", "Arial", sans-serif;
-  text-transform: uppercase;
+  font-family: inherit;
+  text-transform: inherit;
   font-size: 14px;
   font-weight: bold;
   line-height: 26px;
@@ -531,12 +559,6 @@ body {
   line-height: 26px;
 }
 
-.form-search-hotel span {
-  color: #ffffff;
-  font-size: 14px;
-  line-height: 26px;
-}
-
 .form-group1,
 .form-group2 {
   float: left;
@@ -549,37 +571,66 @@ body {
   margin-left: 67px;
 }
 
-.form-group1 label,
-.form-group2 label {
-  width: 136px;
-  height: 22px;
+input[type="checkbox"] + label {
   display: block;
-  position: relative;
-  margin-top: 22px;
-  padding-left: 44px;
+  margin: 0;
+  margin-top: 10px;
   color: #ffffff;
   font-size: 14px;
   line-height: 21px;
-}
-
-input[type="checkbox"] + span {
-  display: inline-block;
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  background: url("../img/check.png") no-repeat;
-  background-position: 0 -22px;
+  padding-left: 44px;
+  position: relative;
   cursor: pointer;
 }
 
-input[type="checkbox"]:checked + span {
+input[type="checkbox"] + label::before,
+input[type="checkbox"] + label:hover::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 26px;
+  height: 23px;
+  background: url("../img/check.png") no-repeat;
   background-position: 0 0;
 }
 
-.form-group1 input[type="checkbox"],
-.form-group2 input[type="checkbox"] {
+input[type="checkbox"]:checked + label::before,
+input[type="checkbox"]:checked + label:hover::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 26px;
+  height: 23px;
+  background: url("../img/check.png") no-repeat;
+  background-position: -25px 0;
+}
+
+input[type="checkbox"]:checked:disabled + label::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 26px;
+  height: 23px;
+  background: url("../img/check.png") no-repeat;
+  background-position: -24px 0;
+}
+
+input[type="checkbox"]:disabled + label::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 26px;
+  height: 23px;
+  background-color: rgba(102, 102, 102, 0.5);
+  background: url("../img/check.png") no-repeat;
+  background-position: -24px -25px;
+}
+
+input[type="checkbox"] {
   display: none;
 }
 
@@ -599,6 +650,7 @@ input[type="checkbox"]:checked + span {
 }
 
 .border-span span {
+  color: #ffffff;
   display: inline-block;
   width: 154px;
   text-align: center;
@@ -622,7 +674,7 @@ input[type="checkbox"]:checked + span {
   color: #ffffff;
   font-size: 14px;
   line-height: 21px;
-  text-transform: uppercase;
+  text-transform: inherit;
   background-color: rgba(119, 92, 83, 0);
   border: 2px solid #fefefe;
   border-radius: 2px;
@@ -637,7 +689,8 @@ input[type="checkbox"]:checked + span {
 .sort {
   height: 75px;
   padding-top: 13px;
-  padding-left: 71px;
+  padding-left: 72px;
+  padding-right: 72px;
   background-color: #FEFEFE;
   border-bottom: 1px solid #E5E5E5;
 }
@@ -689,6 +742,53 @@ input[type="checkbox"]:checked + span {
   border-bottom: none;
 }
 
+.sort-up, .sort-down {
+  float: right;
+  position: relative;
+  cursor: pointer;
+}
+
+.sort-up::before {
+  content: "";
+  position: absolute;
+  top: 30px;
+  right: 24px;
+  width: 13px;
+  height: 12px;
+  background: url("../img/sort-btn.png") no-repeat;
+  background-position: 0 0;
+}
+
+.sort-down::before {
+  content: "";
+  position: absolute;
+  top: 30px;
+  right: 0;
+  width: 13px;
+  height: 12px;
+  background: url("../img/sort-btn.png") no-repeat;
+  background-position: -13px 0;
+}
+
+.sort-up:hover::before {
+  background-position: 0 -12px;
+}
+
+.sort-down:hover::before {
+  background-position: -13px -12px;
+}
+
+.sort-up:active::before {
+  background-position: 0 -24px;
+}
+
+.sort-down:active::before,
+.sort-down-active::before {
+  background-position: -13px -24px;
+}
+
+
+
 .home {
   height: 150px;
   padding-left: 72px;
@@ -716,6 +816,8 @@ input[type="checkbox"]:checked + span {
 .home img {
   float: left;
   padding-top: 30px;
+  color: #000000;
+  background-color: #ffffff;
 }
 
 .home-container {
@@ -770,12 +872,12 @@ input[type="checkbox"]:checked + span {
   height: 25px;
   margin-top: 16px;
   text-align: center;
-  font-family: "PT Sans", "Arial", sans-serif;
+  font-family: inherit;
+  text-transform: inherit;
   color: #ffffff;
   font-size: 14px;
   font-weight: bold;
   line-height: 21px;
-  text-transform: uppercase;
   background-color: #766357;
   border: none;
 }
