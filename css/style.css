@@ -1,11 +1,11 @@
 html,
 body {
-  min-width: 1120px;
+  min-width: 1200px;
   margin: 0;
   padding: 0;
 }
 
-body {
+body, button, input {
   font-family: "PT Sans", "Arial", sans-serif;
   text-transform: uppercase;
   color: #000000;
@@ -21,9 +21,8 @@ body {
 .container {
   width: 1200px;
   margin: 0 auto;
-  padding-left: 40px;
-  padding-right: 40px;
-  background-color: #F2F2F2;
+  background-color: #ffffff;
+  box-shadow: 0 0 40px 20px #f2f2f2;
 }
 
 .main-header {
@@ -97,6 +96,8 @@ body {
   font-size: 21px;
   font-weight: bold;
   line-height: 26px;
+  margin-left: 320px;
+  margin-right: 320px;
 }
 
 .intro-reason {
@@ -138,32 +139,41 @@ body {
 }
 
 .reason-title {
-  margin-top: 50px;
-  margin-bottom: 30px;
+  margin-left: 125px;
+  margin-right: 124px;
+  margin-top: 48px;
+  margin-bottom: 25px;
   font-size: 21px;
   font-weight: bold;
   line-height: 21px;
 }
 
 .reason-disc p {
-  margin-top: 30px;
+  font-size: 14px;
+  line-height: 21px;
+  margin-top: 22px;
+  margin-left: 49px;
+  margin-right: 49px;
 }
 
 .group1 .reason-title {
   color: #000000;
-  margin-top: 162px;
+  margin-top: 159px;
 }
 
 .group2 .reason-title {
   color: #000000;
+  margin-top: 45px;
 }
 
 .group1 p {
-  margin-bottom: 78px;
+  margin-bottom: 80px;
 }
 
 .group2 p {
-  margin-bottom: 53px;
+  margin-bottom: 58px;
+  margin-left: 60px;
+  margin-right: 60px;
 }
 
 .group1 p,
@@ -208,6 +218,7 @@ body {
 }
 
 .decision-title {
+  margin-bottom: 30px;
   font-size: 30px;
   font-weight: bold;
   line-height: 26px;
@@ -221,7 +232,7 @@ body {
 .btn-search-hotel {
   width: 568px;
   height: 86px;
-  margin-top: 30px;
+  margin-top: 33px;
   color: #ffffff;
   font-size: 21px;
   font-weight: bold;
@@ -251,7 +262,9 @@ body {
 }
 
 .conteiner-field {
+  height: 38px;
   margin-bottom: 29px;
+  font-size: 0;
 }
 
 .conteiner-field label {
@@ -262,46 +275,31 @@ body {
   line-height: 26px;
 }
 
-.search-form input[value] {
-  font-family: inherit;
-  text-transform: inherit;
+.search-form input[type="text"] {
   font-size: 14px;
   font-weight: bold;
-  line-height: 26px;
 }
 
 .calendar {
   display: inline-block;
-  width: 346px;
-  height: 38px;
-  background-color: #f2f2f2;
+  vertical-align: middle;
+  float: right;
+  width: 345px;
   border: none;
-}
-
-.arrival {
-  margin-left: 15px;
-}
-
-.departure {
-  margin-left: 12px;
+  position: relative;
 }
 
 .calendar:hover {
   background-color: #EBEBEB;
 }
 
-.calendar input:focus {
-  background-color: #ffffff;
-  border: 2px solid #E5E5E5;
-}
-
 .calendar input {
-  width: 300px;
+  width: 100%;
+  height: 38px;
   box-sizing: border-box;
   background-color: #f2f2f2;
-  border: none;
+  border: 2px solid transparent;
   padding-left: 12px;
-  padding-top: 8px;
 }
 
 .calendar input:hover {
@@ -310,87 +308,117 @@ body {
 
 .calendar input:focus {
   background-color: #ffffff;
+  border: 2px solid #E5E5E5;
 }
 
 .calendar-btn {
   float: right;
   width: 21px;
   height: 22px;
-  margin-top: 8px;
-  margin-right: 8px;
   border: none;
-  background-image: url("../img/calendar.png");
+  background-image: url("../img/sprite.png");
   background-repeat: no-repeat;
-  background-position: right 0;
+  background-position: -5px -5px;
+  background-color: transparent;
+  position: absolute;
+  right: 8px;
+  top: 8px;
 }
 
 .calendar-btn:hover {
-  background-position: right -22px;
+  background-position: -5px -37px;
 }
 
 .calendar-btn:active {
-  background-position: right -44px;
-}
-
-.label-inside {
-  width: 40px;
-  display: inline-block;
+  background-position: -5px -69px;
 }
 
 .amount {
-  width: 116px;
+  width: 114px;
   height: 38px;
   display: inline-block;
+  vertical-align: middle;
   background-color: #f2f2f2;
   border: none;
   font-size: 0;
+  position: relative;
 }
 
 .people {
-  margin-left: 32px;
-  margin-right: 40px;
+  margin-left: 38px;
+  margin-right: 53px;
 }
 
 .child {
-  margin-left: 27px;
+  float: right;
 }
 
-.plus-minus-btn {
-  width: 38px;
-  height: 38px;
+.amount-btn {
   display: inline-block;
   vertical-align: middle;
-  font-size: 21px;
-  line-height: 26px;
-  font-weight: bold;
-  color: #A9A9A9;
-  background-color: #f2f2f2;
-  border: none;
-  cursor: pointer;
+  border: 2px solid transparent;
+  background-image: url("../img/sprite.png");
+  background-repeat: no-repeat;
+  position: absolute;
 }
 
-.plus-minus-btn:hover {
-  color: #000000;
+.minus-btn {
+  float: left;
+  top: 16px;
+  left: 12px;
+  width: 12px;
+  height: 7px;
+  background-position: -5px -562px;
 }
 
-.plus-minus-btn:active {
-  color: #78B4D8;
+.plus-btn {
+  float: right;
+  top: 12px;
+  right: 6px;
+  width: 12px;
+  height: 14px;
+  background-position: -5px -601px;
+}
+
+.minus-btn:hover {
+  background-position: -5px -575px;
+}
+.minus-btn:active {
+  background-position: -5px -588px;
+}
+
+.plus-btn:hover {
+  background-position: -5px -622px;
+}
+.plus-btn:active {
+  background-position: -5px -643px;
 }
 
 .amount input {
-  width: 38px;
-  height: 36px;
+  width: 34px;
+  height: 32px;
   display: inline-block;
   vertical-align: middle;
+  position: absolute;
+  left: 38px;
   background-color: #f2f2f2;
-  border: none;
+  border: 2px solid transparent;
   text-align: center;
+}
+
+.amount input:hover {
+  background-color: #ebebeb;
+}
+
+.amount input:focus {
+  background-color: #ffffff;
+  border: 2px solid #e5e5e5;
 }
 
 .search-btn {
   width: 458px;
   height: 58px;
-  margin-top: 24px;
+  margin-top: 25px;
   color: #ffffff;
   font-size: 21px;
   font-weight: bold;
@@ -434,8 +462,8 @@ body {
   color: #000000;
   text-decoration: none;
   text-transform: uppercase;
-  font-size: 14px;
-  line-height: 26px;
+  font-size: 21px;
+  line-height: 28px;
   font-weight: bold;
 }
 
@@ -449,9 +477,11 @@ body {
 
 .footer-social {
   display: inline-block;
-  width: 400px;
+  width: 398px;
   text-align: center;
   vertical-align: middle;
+  font-size: 0;
+  padding-left: 2px;  /* лишнее, только для попадания в пиксел */
 }
 
 .social-btn {
@@ -459,66 +489,63 @@ body {
   vertical-align: top;
   width: 46px;
   height: 48px;
-  font-size: 0;
-  margin-left: 6px;
+  margin-right: 6px;
   margin-top: 36px;
   margin-bottom: 36px;
   background-color: #81B3D2;
-  background-image: url("../img/social-btn.png");
+  position: relative;
+  }
+
+.social-btn::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-image: url("../img/sprite.png");
   background-repeat: no-repeat;
 }
 
-.social-btn-tw {
-  background-position: 0 0;
+.social-btn:hover {
+  background-color: #669EC0;
 }
 
-.social-btn-tw:hover {
-  background-position: 0 -48px;
+.social-btn:active::before {
+  opacity: 0.3;
 }
 
-.social-btn-tw:active {
-  background-position: 0 -96px;
+.social-btn-tw::before {
+  width: 17px;
+  height: 15px;
+  background-position: -5px -664px;
 }
 
-.social-btn-fb {
-  background-position: -46px 0;
+.social-btn-fb::before {
+  width: 10px;
+  height: 19px;
+  background-position: -5px -386px;
 }
 
-.social-btn-fb:hover {
-  background-position: -46px -48px;
-}
-
-.social-btn-fb:active {
-  background-position: -46px -96px;
-}
-
-.social-btn-yt {
-  background-position: -92px 0;
-}
-
-.social-btn-yt:hover {
-  background-position: -92px -48px;
-}
-
-.social-btn-yt:active {
-  background-position: -92px -96px;
+.social-btn-yt::before {
+  width: 20px;
+  height: 16px;
+  background-position: -5px -749px;
 }
 
 
 .footer-copyright {
   display: inline-block;
-  width: 300px;
+  width: 298px;
   height: 39px;
-  padding-left: 100px;
+  margin-top: 7px;
+  padding-left: 102px;
   text-align: left;
   vertical-align: middle;
-  font-size: 21px;
-  background-image: url("../img/htmlAcademy.png");
-  background-repeat: no-repeat;
-  background-position: 180px 0;
 }
 
 .footer-copyright a {
+  position: relative;
+  display: inline-block;
   color: #010101;
   text-decoration: none;
   text-transform: uppercase;
@@ -526,13 +553,31 @@ body {
   line-height: 26px;
 }
 
-.footer-copyright:hover {
-  background-position: 180px -39px;
+.footer-copyright a::after {
+  content: "";
+  position: absolute;
+  left: 83px;
+  top: -5px;
+  background-image: url("../img/sprite.png");
+  background-repeat: no-repeat;
+  width: 113px;
+  height: 39px;
+  background-position: -5px -415px;
 }
 
-.footer-copyright:active {
-  background-position: 180px -78px;
+.footer-copyright a:hover::after {
+  width: 113px;
+  height: 39px;
+  background-position: -5px -464px;
 }
+
+.footer-copyright a:active::after {
+  width: 113px;
+  height: 39px;
+  background-position: -5px -513px;
+}
+
+
 
 
 
@@ -541,11 +586,11 @@ body {
 /* внутренняя страница Гостиницы Седоны */
 
 .form-search-hotel {
-  height: 188px;
-  padding-top: 27px;
+  height: 190px;
+  padding-top: 25px;
   background-color: #F2F2F2;
   background-image: url("../img/intro2.jpg");
-  background-position: center;
+  background-position: 0 -50px;
 }
 
 .form-search-hotel fieldset {
@@ -554,9 +599,9 @@ body {
 
 .form-search-hotel legend {
   color: #ffffff;
-  font-size: 14px;
+  font-size: 16px;
   font-weight: bold;
-  line-height: 26px;
+  line-height: 21px;
 }
 
 .form-group1,
@@ -567,67 +612,47 @@ body {
   width: 180px;
 }
 
-.form-group2 {
-  margin-left: 67px;
-}
-
 input[type="checkbox"] + label {
   display: block;
   margin: 0;
-  margin-top: 10px;
+  margin-top: 25px;
   color: #ffffff;
   font-size: 14px;
   line-height: 21px;
-  padding-left: 44px;
+  padding-left: 41px;
   position: relative;
   cursor: pointer;
 }
 
-input[type="checkbox"] + label::before,
-input[type="checkbox"] + label:hover::before {
+input[type="checkbox"] + label::before {
   content: "";
   position: absolute;
   top: 0;
   left: 0;
   width: 26px;
-  height: 23px;
-  background: url("../img/check.png") no-repeat;
-  background-position: 0 0;
+  height: 22px;
+  background: url("../img/sprite.png") no-repeat;
+  background-position: -5px -133px;
 }
 
-input[type="checkbox"]:checked + label::before,
+input[type="checkbox"] + label:hover::before {
+  background-position: -5px -165px;
+}
+
+input[type="checkbox"]:checked + label::before {
+  background-position: -5px -101px;
+}
+
 input[type="checkbox"]:checked + label:hover::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 26px;
-  height: 23px;
-  background: url("../img/check.png") no-repeat;
-  background-position: -25px 0;
+  background-position: -5px -229px;
 }
 
 input[type="checkbox"]:checked:disabled + label::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 26px;
-  height: 23px;
-  background: url("../img/check.png") no-repeat;
-  background-position: -24px 0;
+  background-position: -5px -261px;
 }
 
 input[type="checkbox"]:disabled + label::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 26px;
-  height: 23px;
-  background-color: rgba(102, 102, 102, 0.5);
-  background: url("../img/check.png") no-repeat;
-  background-position: -24px -25px;
+  background-position: -5px -197px;
 }
 
 input[type="checkbox"] {
@@ -636,45 +661,137 @@ input[type="checkbox"] {
 
 .form-group3 {
   float: right;
-  margin-right: 50px;
+  margin-right: 53px;
   width: 327px;
 }
 
-.border-span {
+.cost {
   width: 315px;
-  height: 25px;
+  height: 30px;
+  font-size: 0;
+  margin-top: 5px;
   margin-bottom: 10px;
-  padding-top: 7px;
+  padding-top: 2px;
   border: 2px solid #fefefe;
   border-radius: 2px;
+  position: relative;
 }
 
-.border-span span {
-  color: #ffffff;
+.cost::after {
+  content: "";
+  width: 158px;
+  height: 22px;
+  position: absolute;
+  left: 0;
+  top: 5px;
+  border-right: 2px solid #fefefe;
+}
+
+.cost label {
   display: inline-block;
-  width: 154px;
-  text-align: center;
+  vertical-align: middle;
+  width: 82px;
+  color: #ffffff;
+  font-size: 14px;
+  line-height: 21px;
+  text-align: right;
 }
 
-.begin {
-  border-right: 2px solid #ffffff;
+.cost input {
+  display: inline-block;
+  vertical-align: middle;
+  width: 60px;
+  color: #ffffff;
+  font-size: 14px;
+  line-height: 21px;
+  text-align: left;
+  border: 2px solid transparent;
+  background-color: transparent;
 }
 
 .range {
   width: 317px;
-  height: 21px;
-  margin-bottom: 25px;
-  outline: 1px solid red;
+  height: 22px;
+  margin-bottom: 23px;
+  font-size: 0;
+  position: relative;
+  cursor: pointer;
+}
+
+.range-left,
+.range-right {
+  display: inline-block;
+  vertical-align: middle;
+  position: absolute;
+  width: 20px;
+  height: 23px;
+  background: url("../img/sprite.png") no-repeat;
+  background-position: -5px -293px;
+}
+
+.range-left {
+  left: 0;
+  top: 0;
+}
+
+.range-right {
+  right: 45px;
+  top: 0;
+}
+
+.range-left::before,
+.range-right::before {
+  content: "";
+  display: block;
+  width: 1px;
+  height: 1px;
+  border-radius: 50%;
+  position: absolute;
+  top: 9px;
+  left: 9px;
+  z-index: 10;
+}
+
+.range-left::before,
+.range-right::before {
+  border: 1px solid #ABABAB;
+  background-color: #ABABAB;
+}
+
+.range-right:hover::before,
+.range-left:hover::before {
+  border: 1px solid #1C4F80;
+  background-color: #1C4F80;
+}
+
+.range-left::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 8px;
+  width: 255px;
+  height: 2px;
+  border-bottom: 2px solid #ffffff;
+}
+
+.range-right::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 8px;
+  left: 20px;
+  width: 50px;
+  height: 2px;
+  border-bottom: 2px solid #918381;
 }
 
 .btn-form {
-  width: 133px;
-  height: 32px;
-  margin-left: 95px;
+  width: 136px;
+  height: 35px;
+  margin-left: 86px;
   color: #ffffff;
   font-size: 14px;
   line-height: 21px;
-  text-transform: inherit;
   background-color: rgba(119, 92, 83, 0);
   border: 2px solid #fefefe;
   border-radius: 2px;
@@ -708,18 +825,18 @@ input[type="checkbox"] {
 
 .sort-title {
   width: 125px;
-  margin-right: 40px;
+  margin-right: 35px;
 }
 
 .name-sort {
   width: 75px;
-  margin-right: 38px;
+  margin-right: 35px;
   font-size: 12px;
   line-height: 18px;
 }
 
 .criterions a {
-  margin-right: 33px;
+  margin-right: 29px;
   color: #D0D0D0;
   font-size: 12px;
   line-height: 18px;
@@ -751,40 +868,40 @@ input[type="checkbox"] {
 .sort-up::before {
   content: "";
   position: absolute;
-  top: 30px;
+  top: 28px;
   right: 24px;
-  width: 13px;
-  height: 12px;
-  background: url("../img/sort-btn.png") no-repeat;
-  background-position: 0 0;
+  width: 11px;
+  height: 10px;
+  background: url("../img/sprite.png") no-repeat;
+  background-position: -5px -689px;
 }
 
 .sort-down::before {
   content: "";
   position: absolute;
-  top: 30px;
+  top: 28px;
   right: 0;
-  width: 13px;
-  height: 12px;
-  background: url("../img/sort-btn.png") no-repeat;
-  background-position: -13px 0;
+  width: 11px;
+  height: 10px;
+  background: url("../img/sprite.png") no-repeat;
+  background-position: -5px -326px;
 }
 
 .sort-up:hover::before {
-  background-position: 0 -12px;
+  background-position: -5px -709px;
 }
 
 .sort-down:hover::before {
-  background-position: -13px -12px;
+  background-position: -5px -346px;
 }
 
 .sort-up:active::before {
-  background-position: 0 -24px;
+  background-position: -5px -729px;
 }
 
 .sort-down:active::before,
 .sort-down-active::before {
-  background-position: -13px -24px;
+  background-position: -5px -366px;
 }
 
 
@@ -824,7 +941,7 @@ input[type="checkbox"] {
   float: left;
   width: 544px;
   padding-left: 30px;
-  margin-top: 30px;
+  margin-top: 28px;
 }
 
 .description {
@@ -872,8 +989,6 @@ input[type="checkbox"] {
   height: 25px;
   margin-top: 16px;
   text-align: center;
-  font-family: inherit;
-  text-transform: inherit;
   color: #ffffff;
   font-size: 14px;
   font-weight: bold;
@@ -894,7 +1009,7 @@ input[type="checkbox"] {
 .rating {
   float: right;
   width: 110px;
-  margin-right: 73px;
+  margin-right: 72px;
   margin-top: 30px;
   margin-bottom: 30px;
 }

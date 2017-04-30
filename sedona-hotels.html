@@ -36,27 +36,29 @@
         <form class="form-search-hotel clearfix" action="https://echo.htmlacademy.ru" method="post">
           <fieldset class="form-group1">
             <legend>Инфраструктура:</legend>
-             <input id="pool" type="checkbox" name="pool" checked>
--            <label for="pool">Бассейн</label>
--            <input id="parking" type="checkbox" name="parking">
--            <label for="parking">Парковка</label>
--            <input id="wi-fi" type="checkbox" name="wi-fi">
--            <label for="wi-fi">WI-FI</label>
+            <input id="pool" type="checkbox" name="pool" checked>
+            <label for="pool">Бассейн</label>
+            <input id="parking" type="checkbox" name="parking">
+            <label for="parking">Парковка</label>
+            <input id="wi-fi" type="checkbox" name="wi-fi">
+            <label for="wi-fi">WI-FI</label>
           </fieldset>
           <fieldset class="form-group2">
             <legend>Тип жилья:</legend>
             <input id="hotel" type="checkbox" name="hotel" checked>
--            <label for="hotel">Гостиница</label>
--            <input id="motel" type="checkbox" name="motel" checked="">
--            <label for="motel">Мотель</label>
--            <input id="apatments" type="checkbox" name="apatments" checked>
--            <label for="apatments">Апартаменты</label>
+            <label for="hotel">Гостиница</label>
+            <input id="motel" type="checkbox" name="motel" checked="">
+            <label for="motel">Мотель</label>
+            <input id="apatments" type="checkbox" name="apatments" checked>
+            <label for="apatments">Апартаменты</label>
           </fieldset>
           <fieldset class="form-group3">
             <legend>Стоимость в сутки (р):</legend>
-            <div class="border-span">
-              <span class="begin">от 0</span>
-              <span>до 3000</span>
+            <div class="cost">
+              <label for="cost-from">от</label>
+              <input type="text" id="cost-from" name="cost-from" value="0">
+              <label for="cost-to">до</label>
+              <input type="text" id="cost-to" name="cost-to" value="3000">
             </div>
             <div class="range">
               <span class="range-left"></span>
@@ -93,7 +95,7 @@
           </div>
           <div class="rating">
             <span class="stars star-four"></span>
-            <span class="rating-value">Рейтинг:8,5</span>
+            <span class="rating-value">Рейтинг: 8,5</span>
           </div>
         </article>
 
@@ -112,7 +114,7 @@
           </div>
           <div class="rating">
             <span class="stars star-three"></span>
-            <span class="rating-value">Рейтинг:8,9</span>
+            <span class="rating-value">Рейтинг: 8,9</span>
           </div>
         </article>
 
@@ -131,14 +133,14 @@
           </div>
           <div class="rating">
             <span class="stars star-two"></span>
-            <span class="rating-value">Рейтинг:9,2</span>
+            <span class="rating-value">Рейтинг: 9,2</span>
           </div>
         </article>
       </main>
 
       <footer class="footer-bottom">
         <div class="footer-hashtag">
-          <a href="index.html"><span class="hashtag">#visitsedona</span></a>
+          <a href="index.html">#visitsedona</a>
         </div>
         <div class="footer-social">
           <a class="social-btn social-btn-tw" href="#">Твиттер</a>
@@ -146,7 +148,7 @@
           <a class="social-btn social-btn-yt" href="#">YouTube</a>
         </div>
         <div class="footer-copyright">
-          <a class="btn" href="https://htmlacademy.ru">Webcite by</a>
+          <a href="https://htmlacademy.ru">Website by</a>
         </div>
       </footer>
 
