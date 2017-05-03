@@ -40,11 +40,9 @@
           </div>
         </div>
 
-        <section class="reasons clearfix">
-          <div class="reason-item">
-            <div class="reason-img-right">
-              <img src="img/photo1.jpg" width="800" height="256" alt="Фото городка">
-            </div>
+        <section class="reasons">
+          <div class="reason-item clearfix">
+            <img class="reason-img-right" src="img/photo1.jpg" width="800" height="256" alt="Фото городка">
             <div class="reason-disc">
               <h2 class="reason-title">Настоящий городок</h2>
               <span>- №1 -</span>
@@ -68,9 +66,7 @@
           </div>
 
           <div class="reason-item clearfix">
-            <div class="reason-img-left">
-              <img src="img/photo2.jpg" width="800" height="256" alt="Фото моста дьявола">
-            </div>
+            <img class="reason-img-left" src="img/photo2.jpg" width="800" height="256" alt="Фото моста дьявола">
             <div class="reason-disc">
               <h2 class="reason-title">Там есть мост дьявола</h2>
               <span>- №2 -</span>
@@ -106,18 +102,18 @@
 
       <footer class="main-footer">
 
-        <form class="search-form" action="https://echo.htmlacademy.ru" method="post">
+        <form class="modal-search-form" action="https://echo.htmlacademy.ru" method="post">
           <div class="conteiner-field">
             <label for="arrival">Дата заезда:</label>
             <div class="calendar">
-              <input id="arrival" type="text" name="arrival" value="24 апреля 2017" placeholder="Дата заезда">
+              <input id="arrival" type="text" name="arrival" value="24 апреля 2017" title="Дата заезда">
               <button class="calendar-btn" type="button"></button>
             </div>
           </div>
           <div class="conteiner-field">
             <label for="departure">Дата выезда:</label>
-            <div class="calendar">
-              <input id="departure" type="text" name="departure" value="4 июля 2017" placeholder="Дата выезда">
+            <div class="calendar departure">
+              <input id="departure" type="text" name="departure" value="4 июля 2017" title="Дата выезда">
               <button class="calendar-btn" type="button"></button>
             </div>
           </div>
@@ -126,13 +122,13 @@
             <label for="amount-people">Взрослые:</label>
             <div class="amount people">
               <button class="amount-btn minus-btn" type="button"></button>
-              <input id="amount-people" type="text" name="amount-people" value="2" placeholder="Сколько взрослых">
+              <input id="amount-people" type="text" name="amount-people" value="2" title="Сколько взрослых?">
               <button class="amount-btn plus-btn" type="button"></button>
             </div>
             <label for="amount-child">Дети:</label>
             <div class="amount child">
               <button class="amount-btn minus-btn" type="button"></button>
-              <input id="amount-child" type="text" name="amount-child" value="0" placeholder="Сколько детей">
+              <input id="amount-child" type="text" name="amount-child" value="0" title="Сколько детей?">
               <button class="amount-btn plus-btn" type="button"></button>
             </div>
           </div>

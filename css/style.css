@@ -18,6 +18,15 @@ body, button, input {
   clear: both;
 }
 
+img {
+  max-width: 100%;
+}
+
+::-moz-selection {
+color: #FFFFFF;
+background-color: #81B3D2;
+}
+
 .container {
   width: 1200px;
   margin: 0 auto;
@@ -158,20 +167,20 @@ body, button, input {
 
 .group1 .reason-title {
   color: #000000;
-  margin-top: 159px;
+  margin-top: 160px;
 }
 
 .group2 .reason-title {
   color: #000000;
-  margin-top: 45px;
+  margin-top: 46px;
 }
 
 .group1 p {
-  margin-bottom: 80px;
+  margin-bottom: 82px;
 }
 
 .group2 p {
-  margin-bottom: 58px;
+  margin-bottom: 60px;
   margin-left: 60px;
   margin-right: 60px;
 }
@@ -215,6 +224,7 @@ body, button, input {
   padding-top: 30px;
   text-align: center;
   background-color: #ffffff;
+  z-index: 100;
 }
 
 .decision-title {
@@ -251,7 +261,24 @@ body, button, input {
   background-color: #503E32;
 }
 
-.search-form {
+.main-footer {
+  width: 100%;
+  margin: 0 auto;
+  background: #F2F2F2 url("../img/map.jpg") no-repeat 100% 3px;
+}
+
+/* @keyframes modal-down {
+  0% {
+    z-index: -10;
+    transform: translateY(-256px);
+  }
+  100% {
+    transform: translateY(0);
+    display: block;
+  }
+} */
+
+.modal-search-form {
   width: 456px;
   height: 285px;
   margin: 0 auto;
@@ -275,7 +302,7 @@ body, button, input {
   line-height: 26px;
 }
 
-.search-form input[type="text"] {
+.modal-search-form input[type="text"] {
   font-size: 14px;
   font-weight: bold;
 }
@@ -283,10 +310,14 @@ body, button, input {
 .calendar {
   display: inline-block;
   vertical-align: middle;
-  float: right;
+  margin-left: 22px;
   width: 345px;
   border: none;
   position: relative;
+}
+
+.departure  {
+  margin-left: 19px;
 }
 
 .calendar:hover {
@@ -438,11 +469,6 @@ body, button, input {
   background-color: #5596BE
 }
 
-.main-footer {
-  width: 100%;
-  margin: 0 auto;
-  background: #F2F2F2 url("../img/map.jpg") no-repeat 100% 3px;
-}
 
 .footer-bottom {
   width: 1200px;
@@ -481,7 +507,7 @@ body, button, input {
   text-align: center;
   vertical-align: middle;
   font-size: 0;
-  padding-left: 2px;  /* лишнее, только для попадания в пиксел */
+  padding-left: 2px;
 }
 
 .social-btn {
@@ -579,10 +605,6 @@ body, button, input {
 
 
 
-
-
-
-
 /* внутренняя страница Гостиницы Седоны */
 
 .form-search-hotel {
@@ -661,16 +683,16 @@ input[type="checkbox"] {
 
 .form-group3 {
   float: right;
-  margin-right: 53px;
-  width: 327px;
+  margin-right: 72px;
+  padding: 0;
+  width: 317px;
+  text-align: center;
 }
 
 .cost {
-  width: 315px;
+  width: 313px;
   height: 30px;
-  font-size: 0;
-  margin-top: 5px;
-  margin-bottom: 10px;
+  margin: 11px 0;
   padding-top: 2px;
   border: 2px solid #fefefe;
   border-radius: 2px;
@@ -679,120 +701,97 @@ input[type="checkbox"] {
 
 .cost::after {
   content: "";
-  width: 158px;
+  width: 2px;
   height: 22px;
   position: absolute;
-  left: 0;
-  top: 5px;
-  border-right: 2px solid #fefefe;
+  left: 50%;
+  top: 50%;
+  background: #fefefe;
+  transform: translate(-50%, -50%);
 }
 
 .cost label {
   display: inline-block;
-  vertical-align: middle;
-  width: 82px;
+  vertical-align: top;
+  width: 78px;
+  float: left;
+  text-align: right;
   color: #ffffff;
   font-size: 14px;
-  line-height: 21px;
-  text-align: right;
+  line-height: 27px;
+  cursor: pointer;
 }
 
 .cost input {
-  display: inline-block;
-  vertical-align: middle;
-  width: 60px;
+
+  float: left;
+  width: 72px;
+  padding-left: 2px;
   color: #ffffff;
   font-size: 14px;
-  line-height: 21px;
-  text-align: left;
-  border: 2px solid transparent;
-  background-color: transparent;
+  line-height: 25px;
+  border: none;
+  background: none;
 }
 
 .range {
-  width: 317px;
   height: 22px;
-  margin-bottom: 23px;
+  margin-bottom: 21px;
   font-size: 0;
   position: relative;
   cursor: pointer;
 }
 
-.range-left,
-.range-right {
-  display: inline-block;
-  vertical-align: middle;
+.range span {
   position: absolute;
-  width: 20px;
-  height: 23px;
-  background: url("../img/sprite.png") no-repeat;
-  background-position: -5px -293px;
+  top: 0;
+  width: 4px;
+  height: 4px;
+  background: #ababab;
+  border: 8px solid #ffffff;
+  border-radius: 50%;
+  box-shadow: 0 2px 1px 0 rgba(0, 1, 1, 0.3);
 }
 
 .range-left {
   left: 0;
-  top: 0;
 }
 
 .range-right {
   right: 45px;
-  top: 0;
 }
 
-.range-left::before,
-.range-right::before {
-  content: "";
-  display: block;
-  width: 1px;
-  height: 1px;
-  border-radius: 50%;
-  position: absolute;
-  top: 9px;
-  left: 9px;
-  z-index: 10;
-}
-
-.range-left::before,
-.range-right::before {
-  border: 1px solid #ABABAB;
-  background-color: #ABABAB;
-}
-
-.range-right:hover::before,
-.range-left:hover::before {
-  border: 1px solid #1C4F80;
+.range span:hover {
   background-color: #1C4F80;
 }
 
-.range-left::after {
+.range-right::before {
   content: "";
   display: block;
   position: absolute;
-  top: 8px;
-  width: 255px;
-  height: 2px;
-  border-bottom: 2px solid #ffffff;
-}
-
-.range-right::after {
-  content: "";
-  display: block;
-  position: absolute;
-  top: 8px;
-  left: 20px;
-  width: 50px;
-  height: 2px;
+  left: 12px;
+  width: 48px;
+  height: 1px;
   border-bottom: 2px solid #918381;
 }
 
+.range-left::before {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 5px;
+  width: 260px;
+  height: 1px;
+  border-bottom: 2px solid #ffffff;
+}
+
 .btn-form {
-  width: 136px;
-  height: 35px;
-  margin-left: 86px;
+  margin-right: 10px;
+  padding: 6px 34px;
   color: #ffffff;
   font-size: 14px;
   line-height: 21px;
-  background-color: rgba(119, 92, 83, 0);
+  background: transparent;
   border: 2px solid #fefefe;
   border-radius: 2px;
   cursor: pointer;
