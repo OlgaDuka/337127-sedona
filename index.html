@@ -96,45 +96,45 @@
         <section class="decision">
           <h2 class="decision-title">Заинтересовались?</h2>
           <p>Укажите предполагаемые даты поездки,<br> и мы покажем вам лучшие предложения гостиниц в Седоне</p>
-          <button class="btn-search-hotel">Поиск гостиницы в Седоне</button>
+          <a href="#">Поиск гостиницы в Седоне</a>
         </section>
       </main>
 
       <footer class="main-footer">
 
-        <form class="modal-search-form" action="https://echo.htmlacademy.ru" method="post">
+        <form class="modal-search-form modal-search-form-show" action="https://echo.htmlacademy.ru" method="post">
           <div class="conteiner-field">
             <label for="arrival">Дата заезда:</label>
             <div class="calendar">
               <input id="arrival" type="text" name="arrival" value="24 апреля 2017" title="Дата заезда">
-              <button class="calendar-btn" type="button"></button>
+              <button class="calendar-btn" type="button">Календарь</button>
             </div>
           </div>
           <div class="conteiner-field">
             <label for="departure">Дата выезда:</label>
             <div class="calendar departure">
               <input id="departure" type="text" name="departure" value="4 июля 2017" title="Дата выезда">
-              <button class="calendar-btn" type="button"></button>
+              <button class="calendar-btn" type="button">Календарь</button>
             </div>
           </div>
 
           <div class="conteiner-field">
             <label for="amount-people">Взрослые:</label>
             <div class="amount people">
-              <button class="amount-btn minus-btn" type="button"></button>
+              <button class="amount-btn minus-btn" type="button">Уменьшить</button>
               <input id="amount-people" type="text" name="amount-people" value="2" title="Сколько взрослых?">
-              <button class="amount-btn plus-btn" type="button"></button>
+              <button class="amount-btn plus-btn" type="button">Увеличить</button>
             </div>
             <label for="amount-child">Дети:</label>
             <div class="amount child">
-              <button class="amount-btn minus-btn" type="button"></button>
+              <button class="amount-btn minus-btn" type="button">Уменьшить</button>
               <input id="amount-child" type="text" name="amount-child" value="0" title="Сколько детей?">
-              <button class="amount-btn plus-btn" type="button"></button>
+              <button class="amount-btn plus-btn" type="button">Увеличить</button>
             </div>
           </div>
           <button class="search-btn" type="submit">Найти</button>
         </form>
-
+        <iframe class="map-content" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d52385.13567340162!2d-111.83024371755542!3d34.85444379069035!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x872da132f942b00d%3A0x5548c523fa6c8efd!2z0KHQtdC00L7QvdCwLCDQkNGA0LjQt9C-0L3QsCA4NjMzNiwg0KHQqNCQ!5e0!3m2!1sru!2sru!4v1494093875208" width="1200" height="590" frameborder="0" style="border:0" allowfullscreen></iframe>
         <div class="footer-bottom">
           <div class="footer-hashtag">
             <a href="index.html">#visitsedona</a>
@@ -152,5 +152,6 @@
       </footer>
 
     </div>
+    <script src="js/popup-form.js"></script>
   </body>
 </html>

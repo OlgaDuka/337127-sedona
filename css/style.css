@@ -53,6 +53,7 @@ background-color: #81B3D2;
 
 .main-menu li {
   display: inline-block;
+  vertical-align: middle;
   padding-top: 17px;
   width: 239px;
 }
@@ -76,11 +77,15 @@ background-color: #81B3D2;
 }
 
 .main-menu a:hover {
-  color: #78B0D5;
+  color: #81B3D2;
 }
 
 .main-menu a:active {
-  color: #C8C8C8;
+  color: rgba(0, 0, 0, 0.3)
+}
+
+.active-page a {
+  color: #766357;
 }
 
 .logo {
@@ -225,7 +230,6 @@ background-color: #81B3D2;
   padding-top: 30px;
   text-align: center;
   background-color: #ffffff;
-  z-index: 100;
 }
 
 .decision-title {
@@ -240,46 +244,48 @@ background-color: #81B3D2;
   line-height: 24px;
 }
 
-.btn-search-hotel {
+.decision a {
+  display: block;
+  margin: 48px auto 0 auto;
+  padding-top: 30px;
   width: 568px;
-  height: 86px;
-  margin-top: 33px;
+  height: 56px;
   color: #ffffff;
   font-size: 21px;
   font-weight: bold;
   line-height: 26px;
   text-transform: uppercase;
+  text-decoration: none;
   background-color: #766357;
-  border: none;
 }
 
-.btn-search-hotel:hover {
+.decision a:hover {
   background-color: #604E44;
 }
 
-.btn-search-hotel:active {
+.decision a:active {
   color: #928B85;
   background-color: #503E32;
 }
 
 .main-footer {
   width: 100%;
+  min-height: 590px;
   margin: 0 auto;
   background: #F2F2F2 url("../img/map.jpg") no-repeat 100% 3px;
+  position: relative;
 }
 
-/* @keyframes modal-down {
-  0% {
-    z-index: -10;
-    transform: translateY(-256px);
-  }
-  100% {
-    transform: translateY(0);
-    display: block;
-  }
-} */
+.map-content {
+  display: none;
+}
+
+.map-content-show {
+  display: block;
+}
 
 .modal-search-form {
+  display: none;
   width: 456px;
   height: 285px;
   margin: 0 auto;
@@ -287,6 +293,27 @@ background-color: #81B3D2;
   padding: 55px;
   background-color: #ffffff;
   box-shadow: 0 7px 15px 0 rgba(0, 0, 0, 0.15);
+}
+
+.modal-search-form-show {
+  display: block;
+  animation-name: modal-down;
+  animation-duration: 3s;
+  animation-delay: 0.2s;
+  animation-fill-mode: both;
+}
+
+@keyframes modal-down {
+  0% {
+    transform: translateY(0);
+    transform: rotate(90deg);
+  }
+  50% {
+    transform: translateY(78px);
+  }
+  100% {
+    transform: translateY(0);
+  }
 }
 
 .conteiner-field {
@@ -348,6 +375,7 @@ background-color: #81B3D2;
   width: 21px;
   height: 22px;
   border: none;
+  font-size: 0;
   background-image: url("../img/sprite.png");
   background-repeat: no-repeat;
   background-position: -5px -5px;
@@ -391,6 +419,7 @@ background-color: #81B3D2;
   vertical-align: middle;
   width: 38px;
   height: 38px;
+  font-size: 0;
   border: 2px solid transparent;
   background-image: url("../img/sprite.png");
   background-repeat: no-repeat;
@@ -478,6 +507,8 @@ background-color: #81B3D2;
   height: 120px;
   font-size: 0;
   background-color: rgba(249,251,246, 0.9);
+  position: absolute;
+  bottom: 0;
 }
 
 .footer-hashtag {
@@ -531,6 +562,7 @@ background-color: #81B3D2;
   position: absolute;
   top: 50%;
   left: 50%;
+  -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
   background-image: url("../img/sprite.png");
   background-repeat: no-repeat;
@@ -576,6 +608,7 @@ background-color: #81B3D2;
 .footer-copyright a {
   position: relative;
   display: inline-block;
+  vertical-align: middle;
   color: #010101;
   text-decoration: none;
   text-transform: uppercase;
@@ -612,7 +645,7 @@ background-color: #81B3D2;
 /* внутренняя страница Гостиницы Седоны */
 
 .form-search-hotel {
-  height: 190px;
+  min-height: 190px;
   padding-top: 25px;
   background-color: #F2F2F2;
   background-image: url("../img/intro2.jpg");
@@ -634,6 +667,7 @@ background-color: #81B3D2;
 .form-group2 {
   float: left;
   margin-left: 72px;
+  margin-bottom: 30px;
   padding: 0;
   width: 180px;
 }
@@ -711,6 +745,7 @@ input[type="checkbox"] {
   left: 50%;
   top: 50%;
   background: #fefefe;
+  -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
 }
 
@@ -1025,6 +1060,7 @@ input[type="checkbox"] {
   display: block;
   width: 110px;
   height: 17px;
+  font-size: 0;
   background-repeat: no-repeat;
   background-position: right;
 }
