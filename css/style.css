@@ -272,22 +272,17 @@ background-color: #81B3D2;
   width: 100%;
   min-height: 590px;
   margin: 0 auto;
-  background: #F2F2F2 url("../img/map.jpg") no-repeat 100% 3px;
+  background-color: #CBE6A3;
   position: relative;
-}
-
-.map-content {
-  display: none;
-}
-
-.map-content-show {
-  display: block;
 }
 
 .modal-search-form {
   display: none;
   width: 456px;
   height: 285px;
+  position: absolute;
+  top: 0;
+  left: 316px;
   margin: 0 auto;
   margin-bottom: 78px;
   padding: 55px;
@@ -305,7 +300,6 @@ background-color: #81B3D2;
 
 @keyframes modal-down {
   0% {
-    transform: translateY(0);
     transform: rotate(90deg);
   }
   50% {
@@ -509,6 +503,10 @@ background-color: #81B3D2;
   background-color: rgba(249,251,246, 0.9);
   position: absolute;
   bottom: 0;
+}
+
+.footer-hotel {
+  position: relative;
 }
 
 .footer-hashtag {
