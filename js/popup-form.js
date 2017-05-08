@@ -1,6 +1,5 @@
   var link = document.querySelector(".decision a");
   var popup = document.querySelector(".modal-search-form");
-  var map = document.querySelector(".map-content");
 
   link.addEventListener("click", function (evt) {
     evt.preventDefault();
