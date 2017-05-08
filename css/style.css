@@ -273,6 +273,9 @@ background-color: #81B3D2;
   min-height: 590px;
   margin: 0 auto;
   background-color: #CBE6A3;
+  background-image: url("../img/map.jpg");
+  background-repeat: no-repeat;
+  background-size: 1200px 590px;
   position: relative;
 }
 
@@ -298,15 +301,32 @@ background-color: #81B3D2;
   animation-fill-mode: both;
 }
 
-@keyframes modal-down {
+@-webkit-keyframes modal-down {
   0% {
-    transform: rotate(90deg);
+    -webkit-transform: rotate(90deg);
+            transform: rotate(90deg);
   }
   50% {
-    transform: translateY(78px);
+    -webkit-transform: translateY(78px);
+            transform: translateY(78px);
   }
   100% {
-    transform: translateY(0);
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+@keyframes modal-down {
+  0% {
+    -webkit-transform: rotate(90deg);
+            transform: rotate(90deg);
+  }
+  50% {
+    -webkit-transform: translateY(78px);
+            transform: translateY(78px);
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
   }
 }
 
@@ -560,7 +580,7 @@ background-color: #81B3D2;
   position: absolute;
   top: 50%;
   left: 50%;
-  -ms-transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
   background-image: url("../img/sprite.png");
   background-repeat: no-repeat;
@@ -743,7 +763,7 @@ input[type="checkbox"] {
   left: 50%;
   top: 50%;
   background: #fefefe;
-  -ms-transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
 }
 
