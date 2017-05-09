@@ -281,11 +281,11 @@ background-color: #81B3D2;
 
 .modal-search-form {
   display: none;
-  width: 456px;
+  width: 459px;
   height: 285px;
   position: absolute;
   top: 0;
-  left: 316px;
+  left: 315px;
   margin: 0 auto;
   margin-bottom: 78px;
   padding: 55px;
@@ -304,29 +304,35 @@ background-color: #81B3D2;
 @-webkit-keyframes modal-down {
   0% {
     -webkit-transform: rotate(90deg);
-            transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    transform: rotate(90deg);
   }
   50% {
     -webkit-transform: translateY(78px);
-            transform: translateY(78px);
+    -ms-transform: translateY(78px);
+    transform: translateY(78px);
   }
   100% {
     -webkit-transform: translateY(0);
-            transform: translateY(0);
+    -ms-transform: translateY(0);
+    transform: translateY(0);
   }
 }
 @keyframes modal-down {
   0% {
     -webkit-transform: rotate(90deg);
-            transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    transform: rotate(90deg);
   }
   50% {
     -webkit-transform: translateY(78px);
-            transform: translateY(78px);
+    -ms-transform: translateY(78px);
+    transform: translateY(78px);
   }
   100% {
     -webkit-transform: translateY(0);
-            transform: translateY(0);
+    -ms-transform: translateY(0);
+    transform: translateY(0);
   }
 }
 
@@ -581,6 +587,7 @@ background-color: #81B3D2;
   top: 50%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
   background-image: url("../img/sprite.png");
   background-repeat: no-repeat;
@@ -764,6 +771,7 @@ input[type="checkbox"] {
   top: 50%;
   background: #fefefe;
   -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
 }
 
